@@ -58,4 +58,71 @@ body
   flex: 1
   overflow-y: auto
   overflow-x: hidden
-  padding: 20px
+  header
+    background-color: #d9d9d9
+    padding: 15px 20px
+    font-size: 75%
+    text-transform: uppercase
+  section
+    padding: 20px
+
+
+// Buttons/forms
+button
+  color: #333
+  background-color: #fff
+  padding: 6px 12px
+  text-align: center
+  vertical-align: middle
+  border: 1px solid #ccc
+  border-radius: 4px
+  &:hover, &:focus, &:active
+    background-color: #e6e6e6
+    border-color: #adadad
+  &:focus
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+
+// Login page styling
+#login-page
+  background-color: #eee;
+  display: flex
+  align-items: center
+  justify-content: center
+  flex: 1
+
+#login-box
+  flex: none
+  background-color: white;
+  width: 300px;
+  padding: 25px;
+  margin: 0 auto;
+  box-shadow: 15px 15px #ccc;
+
+  h1
+    padding: 0
+    margin: 0 0 25px
+    text-transform: uppercase
+    color: #666;
+    border-bottom: 2px solid #ccc
+
+  form
+    .form-errors
+      margin-bottom: -10px;
+      padding-left: 5px;
+      border-left: 2px solid #B94A48
+      ul
+        list-style: none
+        margin: 0
+        padding: 0
+        li
+          border-bottom: 1px solid #d9c1c1
+        li:last-child
+          border-bottom: none
+    input[type=text], input[type=password]
+      width: 100%
+      padding: 5px
+    input, .button-group
+      display: block
+      margin: 15px 0
+      box-sizing: border-box

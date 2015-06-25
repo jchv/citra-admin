@@ -1,0 +1,21 @@
+doctype html
+html(lang="en")
+  head
+    title citra admin login
+    link(rel='stylesheet', href='style.css')
+  body(ng-app='citraAdminAuth')
+    #header
+      #citra-logo
+    #login-page
+      #login-box(ng-controller='LoginFormController', ng-show='showLogin')
+        h1 Admin Log-in
+        form(onsubmit="return false")
+          form-error(field='errors.non_field_errors')
+          form-error(field='errors.username')
+          input(type="text", ng-model="username", placeholder="Username")
+          form-error(field='errors.password')
+          input(type="password", ng-model="password", placeholder="Password")
+          .button-group
+            button(ng-click="login()") Log in
+    include include/config.jade
+    script(src='script.js')

@@ -14,8 +14,7 @@ var WebpackDevServer = require('webpack-dev-server');
 var webpackConfig = require('./webpack.config');
 
 var paths = {
-    pages: './src/pages/**.jade',
-    scripts: './src/scripts/**.coffee',
+    pages: './src/pages/*.jade',
     styles: './src/styles/**.styl',
     assets: './src/assets/**',
     dest: './dist/'

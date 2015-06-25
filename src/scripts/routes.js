@@ -6,7 +6,12 @@ app.config(function($urlRouterProvider, $stateProvider) {
   $stateProvider
     .state('dashboard', {
       url: '/',
-      template: 'Dashboard'
+      views: {
+        '': {
+          template: 'Dashboard'
+        },
+        'title@': { template: 'Dashboard' }
+      }
     })
     .state('blog', {
       abstract: true,
@@ -14,7 +19,12 @@ app.config(function($urlRouterProvider, $stateProvider) {
     })
     .state('blog.posts', {
       url: '/blog/posts',
-      template: 'Posts'
+      views: {
+        '': {
+          template: 'Posts'
+        },
+        'title@': { template: 'Blog &raquo; Posts' }
+      }
     })
     .state('media', {
       abstract: true,
@@ -22,10 +32,20 @@ app.config(function($urlRouterProvider, $stateProvider) {
     })
     .state('media.screenshots', {
       url: '/media/screenshots',
-      template: 'Screenshots'
+      views: {
+        '': {
+          template: 'Screenshots'
+        },
+        'title@': { template: 'Media &raquo; Screenshots' }
+      }
     })
     .state('media.videos', {
       url: '/media/videos',
-      template: 'Videos'
+      views: {
+        '': {
+          template: 'Videos'
+        },
+        'title@': { template: 'Media &raquo; Videos' }
+      }
     })
 });
