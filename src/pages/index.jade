@@ -1,0 +1,29 @@
+doctype html
+html(lang="en")
+  head
+    title citra admin
+    link(rel='stylesheet', href='style.css')
+  body(ng-app='citraAdmin')
+    #header
+      #citra-logo
+    #container
+      #sidebar
+        ul(class='menu')
+          li
+            span Main
+            ul(class='submenu')
+              li: a(ui-sref='dashboard') Dashboard
+          li
+            span Blog
+            ul(class='submenu')
+              li: a(ui-sref='blog.posts') Posts
+          li
+            span Media
+            ul(class='submenu')
+              li: a(ui-sref='media.screenshots') Screenshots
+              li: a(ui-sref='media.videos') Videos
+      #content
+        header.
+          Section
+        section(ui-view)
+    script(src='script.js')

@@ -1,0 +1,10 @@
+node_modules/
+bower_components/
+dist/
+
+# JetBrains WebStorm/IntelliJ/etc.
+*.iml
+.idea/
+
+# Apple Mac OS X
+.DS_Store

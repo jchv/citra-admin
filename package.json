@@ -1,0 +1,35 @@
+{
+  "name": "citra-admin",
+  "version": "0.0.0",
+  "description": "Admin interface for Citra-emu",
+  "main": "target/index.html",
+  "scripts": {
+    "build": "node ./node_modules/gulp/bin/gulp.js",
+    "serve": "node ./node_modules/gulp/bin/gulp.js serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "engines": {
+    "node": "0.12.x"
+  },
+  "private": true,
+  "repository": "John Chadwick/citra-admin",
+  "author": "John Chadwick",
+  "homepage": "https://admin.citra-emu.org",
+  "dependencies": {
+    "angular": "^1.4.1",
+    "angular-ui-router": "^0.2.15",
+    "del": "^1.2.0",
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-html-minifier": "^0.1.6",
+    "gulp-jade": "^1.0.1",
+    "gulp-plumber": "^1.0.1",
+    "gulp-stylus": "^2.0.5",
+    "gulp-util": "^3.0.6",
+    "nib": "^1.1.0",
+    "node-libs-browser": "^0.5.2",
+    "webpack": "^1.9.12",
+    "webpack-dev-server": "^1.9.0"
+  }
+}
