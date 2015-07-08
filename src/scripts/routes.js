@@ -21,7 +21,18 @@ app.config(function($urlRouterProvider, $stateProvider) {
       url: '/blog/posts',
       views: {
         '': {
-          template: 'Posts'
+          templateUrl: 'partial/blog/post_list.html',
+          controller: 'BlogPostListController'
+        },
+        'title@': { template: 'Blog &raquo; Posts' }
+      }
+    })
+    .state('blog.create_post', {
+      url: '/blog/create_post',
+      views: {
+        '': {
+          templateUrl: 'partial/blog/post_detail.html',
+          controller: 'BlogPostCreateController'
         },
         'title@': { template: 'Blog &raquo; Posts' }
       }

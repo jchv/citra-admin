@@ -6,6 +6,7 @@ html(lang="en")
   body(ng-app='citraAdmin')
     #header
       #citra-logo
+      .user {{user.display_name}}
     #container
       #sidebar
         ul(class='menu')
@@ -26,5 +27,5 @@ html(lang="en")
         header
           .title(ui-view="title")
         section(ui-view)
-    include include/config.jade
+    include ../include/config.jade
     script(src='script.js')

@@ -1,12 +1,25 @@
 var angular = require('angular');
-require('angular-ui-router');
 
 var app = angular.module('citraAdmin', [
-  'ui.router'
+  require('angular-ui-router'),
+  require('angular-cookies'),
+  require('angular-resource'),
+  require('./components')
 ]);
 
-app.config(function($httpProvider) {
-    $httpProvider.defaults.withCredentials = true;
+app.config(function($httpProvider, $resourceProvider) {
+  $httpProvider.defaults.withCredentials = true;
+  $httpProvider.defaults.xsrfCookieName = 'csrftoken';
+  $httpProvider.defaults.xsrfHeaderName = 'X-CSRFToken';
+  $httpProvider.interceptors.push(function($cookies) {
+    return {
+      'request': function(config) {
+        config.headers['X-CSRFToken'] = $cookies.get('csrftoken');
+        return config;
+      }
+    };
+  });
+  $resourceProvider.defaults.stripTrailingSlashes = false;
 });
 
 app.run(function($rootScope, $http) {

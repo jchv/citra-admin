@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic)
 
 html, body
   height: 100%
@@ -10,9 +10,23 @@ body
   display: flex
   flex-direction: column
 
+h1
+  padding: 0
+  margin: 0 0 25px
+  font-weight: normal
+  text-transform: uppercase
+  color: #888
+
 #header
   flex: 0 0 50px
   background: #2da3dd
+  .user
+    color: white
+    font-weight: bold
+    position: absolute
+    right: 10px
+    line-height: 50px
+    padding: 0 10px
 
 #citra-logo
   position: absolute
@@ -55,7 +69,9 @@ body
 
 #content
   background-color: #eee
+  display: flex
   flex: 1
+  flex-flow: column
   overflow-y: auto
   overflow-x: hidden
   header
@@ -64,28 +80,27 @@ body
     font-size: 75%
     text-transform: uppercase
   section
+    display: flex
+    flex: 1
+    flex-flow: column
     padding: 20px
+    overflow: auto
+    ui-view
+      display: flex
+      flex: 1
+      flex-flow: column
 
+#fullpage-box
+  background-color: white
+  padding: 25px
+  box-shadow: 15px 15px #ccc
+  overflow: auto
+  flex: 2
 
-// Buttons/forms
-button
-  color: #333
-  background-color: #fff
-  padding: 6px 12px
-  text-align: center
-  vertical-align: middle
-  border: 1px solid #ccc
-  border-radius: 4px
-  &:hover, &:focus, &:active
-    background-color: #e6e6e6
-    border-color: #adadad
-  &:focus
-    outline: 5px auto -webkit-focus-ring-color;
-    outline-offset: -2px;
 
 // Login page styling
 #login-page
-  background-color: #eee;
+  background-color: #eee
   display: flex
   align-items: center
   justify-content: center
@@ -93,23 +108,21 @@ button
 
 #login-box
   flex: none
-  background-color: white;
-  width: 300px;
-  padding: 25px;
-  margin: 0 auto;
-  box-shadow: 15px 15px #ccc;
+  background-color: white
+  width: 300px
+  padding: 25px
+  margin: 0 auto
+  box-shadow: 15px 15px #ccc
 
   h1
-    padding: 0
-    margin: 0 0 25px
     text-transform: uppercase
-    color: #666;
+    color: #666
     border-bottom: 2px solid #ccc
 
   form
     .form-errors
-      margin-bottom: -10px;
-      padding-left: 5px;
+      margin-bottom: -10px
+      padding-left: 5px
       border-left: 2px solid #B94A48
       ul
         list-style: none
@@ -126,3 +139,46 @@ button
       display: block
       margin: 15px 0
       box-sizing: border-box
+
+.post-title
+  font-size: 200%
+  width: 800px
+
+// Buttons/forms
+button
+  color: #333
+  background-color: #fff
+  padding: 6px 12px
+  text-align: center
+  vertical-align: middle
+  border: 1px solid #ccc
+  border-radius: 4px
+  margin-right: 12px
+  &:hover, &:focus, &:active
+    background-color: #e6e6e6
+    border-color: #adadad
+  &:focus
+    outline: 5px auto -webkit-focus-ring-color
+    outline-offset: -2px
+
+.form-vertical
+  .form-group
+    display: table
+    margin: 25px 0
+  .form-label, .form-control
+    display: table-row
+  .form-label
+    text-transform: uppercase
+    font-weight: bold
+    font-size: 80%
+    color: #666
+  input[type=text], input[type=password]
+    min-width: 200px
+  textarea
+    width: 100%
+    min-height: 200px
+
+// Misc
+.CodeMirror
+  width: auto
+  border: 1px solid #ccc

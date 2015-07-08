@@ -1,0 +1,13 @@
+form-error(field='errors.title')
+input(name='title', type='text', class='post-title', placeholder='Title', ng-model='title')
+.form-vertical
+  .form-group(ng-hide='true')
+    form-error(field='errors.seo_title')
+    label.form-label SEO Title
+    .form-control: input(name='seo_title', type='text', class='seo-title', placeholder='SEO title')
+  .form-group
+  form-error(field='errors.contents')
+  markdown-control(editor-object='editor')
+  .form-group
+    button(ng-click='save()') Save
+    button Cancel
